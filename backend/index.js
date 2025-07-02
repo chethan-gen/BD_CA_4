@@ -6,6 +6,7 @@ const User = require('./user');
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 require('dotenv').config();
 const SECRETE_KEY = process.env.SECRETE_KEY||'supersecretkey';
 const PORT = process.env.PORT||8080;
